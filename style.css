@@ -1,7 +1,6 @@
 /* ---| Helpers |--- */
 ._rLink\(\) {text-decoration: none;}
 /* ---| Cells |--- */
-.B\(n\) {bottom: n;}
 .Bgc\(rgb\(250\,250\,241\)\) {background-color: rgb(250,250,241);}
 .Bgi\(url\(resources\/bg\.jpg\)\) {background-image: url(resources/bg.jpg);}
 .Bxz\(bb\) {-moz-box-sizing: border-box; box-sizing: border-box;}
@@ -18,7 +17,6 @@
 .Fz\(2\.5rem\) {font-size: 2.5rem;}
 .H\(100\%\) {height: 100%;}
 .H\(10rem\) {height: 10rem;}
-.H\(24rem\) {height: 24rem;}
 .M\(0\) {margin: 0;}
 .M\(a\) {margin: auto;}
 .Maw\(50rem\) {max-width: 50rem;}
@@ -26,7 +24,6 @@
 .Mt\(4\.3rem\) {margin-top: 4.3rem;}
 .Mx\(a\) {margin-left: auto; margin-right: auto;}
 .O\(n\) {outline: none;}
-.Ov\(h\) {overflow: hidden;}
 .P\(\.5rem\) {padding: .5rem;}
 .Pb\(1rem\) {padding-bottom: 1rem;}
 .Pr\(s04\) {padding-right: .25rem;}
