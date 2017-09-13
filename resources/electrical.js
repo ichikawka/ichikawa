@@ -54,7 +54,7 @@ function process(n,diodes) {
   var ch = get(n,"data-el").split(" ")[0]
   var switchDiodes = diodes.filter(function(x,_,_){
     return (x.getAttribute("data-el").split(" ")[0] == ch)});
-  var reaction = function(event) {
+  var effect = function(event) {
     for (var i=0; i < switchDiodes.length; i++) {
       var data = (switchDiodes[i].getAttribute("data-el")).split(" ");
       for (var k=1; k < data.length; k++) {
@@ -63,7 +63,7 @@ function process(n,diodes) {
       }
     }
   }
-  return reaction
+  return effect
 }
 
 function processButton(n) {

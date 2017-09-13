@@ -1,11 +1,16 @@
 /* ---| Helpers |--- */
 ._rLink\(\) {text-decoration: none;}
 /* ---| Cells |--- */
+.Bd\(2px\,d\,blue\) {border: 2px dotted rgb(51,126,221);}
+.Bdrs\(s02\) {border-radius: .694rem;}
+.Bgc\(blue\) {background-color: rgb(51,126,221);}
 .Bgc\(rgb\(250\,250\,241\)\) {background-color: rgb(250,250,241);}
 .Bgi\(url\(resources\/bg\.jpg\)\) {background-image: url(resources/bg.jpg);}
 .Bxz\(bb\) {-moz-box-sizing: border-box; box-sizing: border-box;}
 .C\(\#C70025\)\:h:hover {color: #C70025;}
 .C\(grey-3\) {color: rgb(85,85,85);}
+.C\(white\) {color: rgb(255,255,255);}
+.Cur\(p\) {cursor: pointer;}
 .D\(f\) {display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;}
 .D\(n\) {display: none;}
 .Ff\(ClearSans\) {font-family: ClearSans;}
@@ -19,16 +24,22 @@
 .H\(100\%\) {height: 100%;}
 .H\(8rem\) {height: 8rem;}
 .M\(0\) {margin: 0;}
+.M\(\.2rem\) {margin: .2rem;}
 .M\(a\) {margin: auto;}
 .Maw\(50rem\) {max-width: 50rem;}
 .Ml\(\.8rem\) {margin-left: .8rem;}
 .Mt\(4\.3rem\) {margin-top: 4.3rem;}
 .Mx\(a\) {margin-left: auto; margin-right: auto;}
 .O\(n\) {outline: none;}
+.Op\(\.6\)\:h:hover {opacity: .6;}
+.Or {order: ;}
 .P\(0\) {padding: 0;}
+.P\(\.2rem\) {padding: .2rem;}
+.Pb\(1rem\) {padding-bottom: 1rem;}
 .Pb\(\.2rem\) {padding-bottom: .2rem;}
 .Pr\(s04\) {padding-right: .25rem;}
 .Px\(\.5rem\) {padding-left: .5rem; padding-right: .5rem;}
+.Py\(\.2rem\) {padding-top: .2rem; padding-bottom: .2rem;}
 .Ta\(c\) {text-align: center;}
 .W\(80\%\) {width: 80%;}
 @media all and (min-width: 48rem) {
@@ -41,7 +52,13 @@
 .H\(10rem\)\@md {height: 10rem;}
 }
 @media all and (min-width: 48rem) {
+.Maw\(50\%\)\@md {max-width: 50%;}
+}
+@media all and (min-width: 48rem) {
 .Pb\(1rem\)\@md {padding-bottom: 1rem;}
+}
+@media all and (min-width: 48rem) {
+.Px\(2rem\)\@md {padding-left: 2rem; padding-right: 2rem;}
 }
 @media all and (min-width: 48rem) {
 .Px\(6rem\)\@md {padding-left: 6rem; padding-right: 6rem;}
