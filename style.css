@@ -2,8 +2,10 @@
 ._rLink\(\) {text-decoration: none;}
 /* ---| Cells |--- */
 .Bd\(2px\,d\,blue\) {border: 2px dotted rgb(51,126,221);}
+.Bd\(2px\,d\,green\) {border: 2px dotted rgb(25,169,116);}
 .Bdrs\(s02\) {border-radius: .694rem;}
 .Bgc\(blue\) {background-color: rgb(51,126,221);}
+.Bgc\(green\) {background-color: rgb(25,169,116);}
 .Bgc\(rgb\(250\,250\,241\)\) {background-color: rgb(250,250,241);}
 .Bgi\(url\(resources\/bg\.jpg\)\) {background-image: url(resources/bg.jpg);}
 .Bxz\(bb\) {-moz-box-sizing: border-box; box-sizing: border-box;}
