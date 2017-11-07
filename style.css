@@ -52,6 +52,7 @@
 .Ta\(c\) {text-align: center;}
 .W\(30\%\) {width: 30%;}
 .W\(80\%\) {width: 80%;}
+.W\(90\%\) {width: 90%;}
 @media all and (min-width: 48rem) {
 .Bxsh\(0\,0\,1rem\,0\,black\)\@md {box-shadow: 0 0 1rem 0 rgb(0,0,0);}
 }
