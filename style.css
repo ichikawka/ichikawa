@@ -2,10 +2,10 @@
 ._rLink\(\) {text-decoration: none;}
 /* ---| Cells |--- */
 .Bd\(2px\,d\,blue\) {border: 2px dotted rgb(51,126,221);}
-.Bd\(2px\,d\,green\) {border: 2px dotted rgb(25,169,116);}
-.Bdrs\(s02\) {border-radius: .694rem;}
+.Bdrus\(3px\) {border-radius: 3px;}
+.Bdrus\(s02\) {border-radius: .694rem;}
+.Bdt\(s\,4px\,grey\) {border-top: solid 4px grey;}
 .Bgc\(blue\) {background-color: rgb(51,126,221);}
-.Bgc\(green\) {background-color: rgb(25,169,116);}
 .Bgc\(rgb\(250\,250\,241\)\) {background-color: rgb(250,250,241);}
 .Bgi\(url\(resources\/bg\.jpg\)\) {background-image: url(resources/bg.jpg);}
 .Bxz\(bb\) {-moz-box-sizing: border-box; box-sizing: border-box;}
@@ -17,6 +17,8 @@
 .D\(n\) {display: none;}
 .Ff\(ClearSans\) {font-family: ClearSans;}
 .Ff\(Papyrus\) {font-family: Papyrus;}
+.Fl\(l\) {float: left;}
+.Fl\(r\) {float: right;}
 .Fld\(c\) {-webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column;}
 .Flxg\(1\) {-webkit-flex-grow: 1; -ms-flex-positive: 1; flex-grow: 1;}
 .Fw\(b\) {font-weight: bold;}
@@ -27,8 +29,12 @@
 .H\(8rem\) {height: 8rem;}
 .M\(0\) {margin: 0;}
 .M\(\.2rem\) {margin: .2rem;}
+.M\(\.5rem\) {margin: .5rem;}
 .M\(a\) {margin: auto;}
 .Maw\(50rem\) {max-width: 50rem;}
+.Maw\(60rem\) {max-width: 60rem;}
+.Mih\(100\%\) {min-height: 100%;}
+.Mih\(20rem\) {min-height: 20rem;}
 .Ml\(\.8rem\) {margin-left: .8rem;}
 .Mt\(4\.3rem\) {margin-top: 4.3rem;}
 .Mx\(a\) {margin-left: auto; margin-right: auto;}
@@ -42,7 +48,9 @@
 .Pr\(s04\) {padding-right: .25rem;}
 .Px\(\.5rem\) {padding-left: .5rem; padding-right: .5rem;}
 .Py\(\.2rem\) {padding-top: .2rem; padding-bottom: .2rem;}
+.Ta\(b\) {text-align: b;}
 .Ta\(c\) {text-align: center;}
+.W\(30\%\) {width: 30%;}
 .W\(80\%\) {width: 80%;}
 @media all and (min-width: 48rem) {
 .Bxsh\(0\,0\,1rem\,0\,black\)\@md {box-shadow: 0 0 1rem 0 rgb(0,0,0);}
@@ -51,10 +59,16 @@
 .D\(b\)\@md {display: block;}
 }
 @media all and (min-width: 48rem) {
+.D\(f\)\@md {display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;}
+}
+@media all and (min-width: 48rem) {
 .H\(10rem\)\@md {height: 10rem;}
 }
 @media all and (min-width: 48rem) {
 .Maw\(50\%\)\@md {max-width: 50%;}
+}
+@media all and (min-width: 48rem) {
+.Mih\(30rem\)\@md {min-height: 30rem;}
 }
 @media all and (min-width: 48rem) {
 .Pb\(1rem\)\@md {padding-bottom: 1rem;}
@@ -63,5 +77,5 @@
 .Px\(2rem\)\@md {padding-left: 2rem; padding-right: 2rem;}
 }
 @media all and (min-width: 48rem) {
-.Px\(6rem\)\@md {padding-left: 6rem; padding-right: 6rem;}
+.Px\(4rem\)\@md {padding-left: 4rem; padding-right: 4rem;}
 }
