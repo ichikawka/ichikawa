@@ -20,6 +20,7 @@
 .Fl\(l\) {float: left;}
 .Fl\(r\) {float: right;}
 .Fld\(c\) {-webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column;}
+.Flw\(w\) {-ms-flex-wrap: wrap; flex-wrap: wrap;}
 .Flxg\(1\) {-webkit-flex-grow: 1; -ms-flex-positive: 1; flex-grow: 1;}
 .Fw\(b\) {font-weight: bold;}
 .Fw\(n\) {font-weight: normal;}
@@ -27,12 +28,14 @@
 .Fz\(2\.5rem\) {font-size: 2.5rem;}
 .H\(100\%\) {height: 100%;}
 .H\(8rem\) {height: 8rem;}
+.Jc\(c\) {-webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;}
 .M\(0\) {margin: 0;}
 .M\(\.2rem\) {margin: .2rem;}
 .M\(\.5rem\) {margin: .5rem;}
 .M\(a\) {margin: auto;}
 .Maw\(50rem\) {max-width: 50rem;}
 .Maw\(60rem\) {max-width: 60rem;}
+.Maw\(70rem\) {max-width: 70rem;}
 .Mih\(100\%\) {min-height: 100%;}
 .Mih\(20rem\) {min-height: 20rem;}
 .Ml\(\.8rem\) {margin-left: .8rem;}
