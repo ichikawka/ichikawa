@@ -2,6 +2,7 @@
 ._rLink\(\) {text-decoration: none;}
 /* ---| Cells |--- */
 .Bd\(2px\,d\,blue\) {border: 2px dotted rgb(51,126,221);}
+.Bd\(n\) {border: none;}
 .Bdrus\(3px\) {border-radius: 3px;}
 .Bdrus\(s02\) {border-radius: .694rem;}
 .Bdt\(s\,4px\,grey\) {border-top: solid 4px grey;}
