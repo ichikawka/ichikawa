@@ -25,227 +25,35 @@
 </nav>
 <hr class="W(80%)">
 
-<main class="Px(.5rem) Px(2rem)@md Pb(1rem)">
+<main class="Px(.5rem) Px(2rem)@md Pb(1rem)" id=menu></main>
+<script src=resources/marked.min.js></script>
+<script>
+function getMenu(u,t,c,r) {
+  r = new XMLHttpRequest();
+  r.open("GET", u);
+  r.responseType = t;
+  r.onreadystatechange = function() {
+    if (r.readyState > 3) {
+      c(t == "json" && r.responseType !== t ? JSON.parse(r.response) : r.response);
+  }};
+  r.send();
+};
 
-<h3 data-n=app class="nNerve Bgc(blue) C(white) Py(.2rem) Maw(50%)@md Op(.6):h Cur(p) M(.2rem) Mx(a) Ta(c) Bdrus(s02)">
-Appetizers
-</h3>
-<div data-n="app toggle" class="nMuscle Bd(2px,d,blue) P(.2rem)">
-	<p><b>Edamame</b> (Soy Bean Pods) GF $4.50</p>
-	<p><b>Agedashi Tofu</b> $5.oo</p>
-	<p>Tempura Tofu, Dashi Broth, Bonita Flakes &amp; Green Onions</p>
-	<p><b>Peter’s Gyoza</b> 5pc $7.00 8pc $10.00</p>
-	<p>Hand Made Japanese pot stickers with Beef, Pork, cabbage, onion and spices. Pan Seared, served with Gyoza sauce.</p>
-	<p><b>Baked Mussels</b> (GF) $8.50</p>
-	<p>Six New Zealand Mussels on the ½ shell. Topped with Aioli sauce and green onion and baked golden brown.</p>
-	<p><b>Soft-Shell Crab</b> (each) $10.50</p>
-	<p>Fried golden brown and served with our Ponzu sauce.</p>
-	<p><b>Tempura Onion Rings</b> $7.00</p>
-	<p>Hand dipped to order and topped with Wasabi mayo &amp; Honey-Garlic sauce.</p>
-	<p><b>Marinated Karaage Wings</b> (6pc) $8.00</p>
-	<p>Marinated in Soy&amp; Sake, fried golden and tossed in our Honey-Chili sauce.</p>
-	<p><b>Vegetable Tempura</b> Seasonal Vegetables Lightly Battered and fried $8.00</p>
-	<p>. Add Shrimp EACH $2.00</p>
-	<p><b>Calamari Rings</b> $11.00</p>
-	<p>Lightly floured Calamari flash fried and topped with our Wasabi mayo &amp; Honey-Garlic sauce.</p>
-	<p><b>Poki Tuna*</b> $9.00</p>
-	<p>Raw Tuna served over thin sliced vegetables, topped with a spicy Sake based sauce.</p>
-	<p><b>Usuzukuri (Tai) Red Snapper*</b> $14.00</p>
-	<p>10 pieces of thin sliced raw Red Snapper served with a Ponzu dipping sauce.</p>
-	<p><b>Tataki Albacore</b> $13.00</p>
-	<p>Albacore Tuna seared on the outside, raw on the inside. Thin sliced over slivered onions and topped with a Ponzu sauce.</p>
-	<p>*Indicates RAW SEAFOOD and/or RAW EGG.</p>
-	<p>Consuming raw or under-cooked Meats, Seafood and Eggs may increase your risk for food borne illness.</p>
-	<p><b>(GF) = Gluten Free</b></p>
-</div>
+marked.setOptions({
+	renderer: new marked.Renderer(),
+	gfm: false,
+	tables: true,
+	breaks: false,
+	pedantic: false,
+	sanitize: false,
+	smartLists: true,
+	smartypants: true
+});
 
-<h3 data-n=salad class="nNerve Bgc(blue) C(white) Py(.2rem) Maw(50%)@md Op(.6):h Cur(p) M(.2rem) Mx(a) Ta(c) Bdrus(s02)">
-Salads
-</h3>
-<div data-n="salad toggle" class="nMuscle Bd(2px,d,blue) P(.2rem)">
-	<p><b>House Green Salad</b> sm $5.00 lg $8.00</p>
-	<p>Spring mixed greens, cucumber, tomatoes, cabbage, avocado with Miso-Ginger dressing.</p>
-	<p><b>Wakame Salad</b> $5.00</p>
-	<p>Wakame seaweed and cucumber with Sunomono &amp; Ponzu sauce.</p>
-	<p><b>Kaisou Salad</b> $7.00</p>
-	<p>Seaweed salad marinated in Sesame oil and Soy sauce. Topped with Sesame Seeds.</p>
-	<p><b>Sunomono Salad</b> $8.00</p>
-	<p>Wakame seaweed and Cucumber topped with a choice of Dungeness Crab, Octopus (Taco) or Shrimp and finished with Tosatsu Ponzu sauce.</p>
-	<p><b>Tori Chicken Salad</b> (GF) $12.00</p>
-	<p>Spring mix salad, cucumbers, tomatoes, crispy rice noodles and chicken, tossed in a Sesame Dressing.</p>
-	<p><b>Sashimi Salad*</b> (GF) $16.00</p>
-	<p>Spring mix salad, cucumber, tomatoes and shredded Daikon radish topped with assorted Sashimi and finished with a Plum dressing.</p>
-</div>
-
-<h3 data-n=soup class="nNerve Bgc(blue) C(white) Py(.2rem) Maw(50%)@md Op(.6):h Cur(p) M(.2rem) Mx(a) Ta(c) Bdrus(s02)">
-Soups
-</h3>
-<div data-n="soup toggle" class="nMuscle Bd(2px,d,blue) P(.2rem)">
-	<p><b>Miso Soup</b> $2.00</p>
-	<p>Peter’s classic Miso soup. Served with Wakame seaweed, Tofu and green onion.</p>
-	<p>(Broth contains fish)</p>
-	<p><b>Tempura Udon / Soba</b> $16.00</p>
-	<p>Shrimp and vegetable Tempura served in a fish broth with your choice of Udon or Soba noodles.</p>
-	<p><b>Chanpone</b> $17.00</p>
-	<p>Japanese egg noodle soup with a combination of Seafood, Pork and Vegetables.</p>
-	<p><b>Nabeyaki Udon</b> $18.00</p>
-	<p>Traditional Hot Pot of Seafood, Egg &amp; Udon noodles.</p>
-	<p><b>Sukiyaki</b></p>
-	<p>Traditional Hot Pot of vegetables, Tofu, Shiitake mushrooms and Shiritaki noodles, (Yam), with a choice of meat slow cooked in a slightly sweet broth.</p>
-	<p>Vegetable $13.00 Chicken, Pork or Beef $16.00</p>
-</div>
-
-<h3 data-n=feature class="nNerve Bgc(blue) C(white) Py(.2rem) Maw(50%)@md Op(.6):h Cur(p) M(.2rem) Mx(a) Ta(c) Bdrus(s02)">
-Features
-</h3>
-<div data-n="feature toggle" class="nMuscle Bd(2px,d,blue) P(.2rem)">
-	<p>The following dishes include Miso soup, small Salad and steamed Rice</p>
-	<p><b>From the Sea</b></p>
-	<p><b>Salmon</b> Served grilled or Teriyaki style. $17.00</p>
-	<p><b>Mackerel</b> (Saba) Served Salted or Teriyaki style $16.00</p>
-	<p><b>Ahi Tuna*</b> Coated in peppery spices and seared rare with our $22.00</p>
-	<p>7<sup>TH</sup> Element sauce, Tobikko (fish eggs) &amp; Wasabi mayo.</p>
-	<p><b>Gin Dara</b> Grilled Black Cod marinated in Soy &amp; Mirin Rice wine. $18.00</p>
-	<p><b>Tarakasu</b> Grilled Black Cod marinated in Sake &amp; Miso. $20.00</p>
-	<p><b>Chili-Miso Seafood</b> (GF) An assortment of seafood, (Squid, Shrimp, $19.00</p>
-	<p>Scallops and Fish), sautéed with fresh vegetables in a Chili-Miso sauce.</p>
-	<p><b>Tempura</b> A variety of seasonal vegetables lightly battered and fried $13.00</p>
-	<p>golden brown. Served with a Tempura dipping sauce.</p>
-	<p>Add Fish <b>$3.00</b> Shrimp <b>$5.00</b> Combo <b>$5.00</b></p>
-	<p><b>From the Farm</b></p>
-	<p><b>Chicken Teriyaki</b> Stir-fried with Onions, Shiitake mushrooms and $15.00</p>
-	<p>House-made Teriyaki sauce.</p>
-	<p><b>Tonkatsu</b> Lightly breaded Pork cutlets fried and served with Tonkatsu $17.00</p>
-	<p>Sauce.</p>
-	<p><b>Grilled Sirloin</b> 8oz. Snake River “Kobe” sirloin steak, grilled and served $25.00</p>
-	<p>With a potato croquette and sautéed vegetables.</p>
-	<p><b>Teriyaki New York</b> 8oz. Washington raised New York Steak, grilled and $28.00</p>
-	<p>Served with sautéed vegetables and steamed rice.</p>
-</div>
-
-<h3 data-n=noodle class="nNerve Bgc(blue) C(white) Py(.2rem) Maw(50%)@md Op(.6):h Cur(p) M(.2rem) Mx(a) Ta(c) Bdrus(s02)">
-Noodle Dishes
-</h3>
-<div data-n="noodle toggle" class="nMuscle Bd(2px,d,blue) P(.2rem)">
-	<p><b>Yakisoba</b> Stir-fried vegetable in Sesame oil &amp; Yakisoba seasonings. $13.00</p>
-	<p>Add Tofu <b>$2.00</b> Chicken <b>$3.00</b> Beef <b>$4.00</b> Shrimp <b>$6.00</b></p>
-	<p><b>Gomoku Yakisoba</b> Chicken, Beef, Pork, Shrimp and vegetables stir-fried $20.00</p>
-	<p>With Yakisoba noodles.</p>
-	<p><b>Ebi Shiitake Bi Fun</b> (GF) Rice noodles with Shrimp, Shiitake $17.00</p>
-	<p>mushrooms and green onion in Black-Bean Soy sauce</p>
-	<p><b>Donburi (Rice Bowl)</b></p>
-	<p><b>Gin Dara Don</b> Marinated Black Cod, grilled and brushed with Eel sauce. $18.00</p>
-	<p>Finished with pickled Daikon, Eggplant and Cucumber over steamed rice. Patron favorite.</p>
-	<p><b>Tonkatsu Don</b> Crispy, breaded pork with vegetables, egg and a $16.00</p>
-	<p>sweet sauce.</p>
-	<p><b>Unagi Don</b> Broiled fresh water Eel, (Unagi), with Tamago and $21.00</p>
-	<p>Kabayaki sauce.</p>
-	<p><b>Tempura Don</b> Tempura Shrimp and vegetables over steamed rice. $14.00</p>
-	<p><b>Teriyaki Chicken Don</b> Stir-Fried Chicken with onion and Shiitake $14.00</p>
-	<p>Mushrooms served over steamed rice.</p>
-	<p><b>Yasi Don</b> (GF) Stir-Fried vegetables and Tofu with a spicy $14.00</p>
-	<p>Chili-Miso sauce.</p>
-</div>
-
-<h3 data-n=sushi class="nNerve Bgc(blue) C(white) Py(.2rem) Maw(50%)@md Op(.6):h Cur(p) M(.2rem) Mx(a) Ta(c) Bdrus(s02)">
-Sushi Entrees *
-</h3>
-<div data-n="sushi toggle" class="nMuscle Bd(2px,d,blue) P(.2rem)">
-	<p>The following entrees include Zensai salad &amp; Miso soup</p>
-	<p><b>Moriawase</b> Chef’s choice Sashimi $27.00</p>
-	<p><b>Sushi &amp; Sashimi Combo</b> Chef’s choice of Sushi, Sashimi $29.00</p>
-	<p>And a thin Roll.</p>
-	<p><b>Ichikawa Combo</b> Ahi Tuna Sashimi, Salmon Sushi, Unagi Sushi $25.00</p>
-	<p>And a PT Maki.</p>
-	<p><b>Omakase</b> Chef Peter’s specialty cuts of the day. Available as Sushi $35.00</p>
-	<p>Or Sashimi.</p>
-	<p><b>Chirashi Bowl</b> Chef’s choice Sashimi over Sushi rice. $16.00</p>
-	<p><b>Karashi Chirashi</b> Chef’s choice Sashimi in a spicy sauce with $19.00</p>
-	<p>Mixed greens and Sushi rice.</p>
-	<p><b>Sashimi &amp; Tempura Combo</b> Chef’s choice Sashimi with $24.00</p>
-	<p>Assorted vegetable and Shrimp Tempura. Includes a green salad.</p>
-	<p><b>Peter’s choice Sushi *</b></p>
-	<p><b>6pc</b> $16.00 <b>10pc</b> $23.00 <b>14pc</b> $29.00</p>
-	<p>*Indicates RAW SEAFOOD and/or RAW EGG.</p>
-	<p>Consuming raw or under-cooked Meats, Seafood and Eggs may increase your risk for food borne illness.</p>
-	<p><b>(GF) = Gluten Free</b></p>
-	<h3>Thin Rolls (6pc)*</h3>
-	<p><b>Kappa</b> (Cucumber) $4.00</p>
-	<p><b>Avocado</b> $4.50</p>
-	<p><b>Kampyo</b> (Pickled Gourd) $4.50</p>
-	<p><b>Natto</b> (Fermented Soybeans) $5.00</p>
-	<p><b>Sake</b> (Salmon) $5.50</p>
-	<p><b>Tekka</b> (Raw Ahi Tuna) $6.00</p>
-	<h3>Hand Rolls *</h3>
-	<p>Single roll, shaped like a cone, (Not Cut)</p>
-	<p><b>Gin Dara</b> Tempura Black Cod &amp; cucumber drizzled with Eel sauce. $7.50</p>
-	<p><b>Dungeness Crab</b> Dungeness Crab salad with cucumber &amp; Tobikko. $8.00</p>
-	<p><b>Seared Ahi Tuna</b> Ahi, seared with cucumber. Topped with Eel sauce. $7.00</p>
-	<p><b>Negi Hama</b> Minced, raw Hamachi &amp; green onion. $7.00</p>
-	<p><b>Rosana</b> Raw Scallops, Avocado &amp; Tobikko. $7.00</p>
-	<p><b>Sake Kawa</b> Broiled Salmon skin, cucumber &amp;Burdock root. $7.00</p>
-	<p><b>Kara Hotate</b> Spicy, Raw Scallops &amp; cucumber $7.00</p>
-	<p><b>Karashi Maguro</b> Spicy, Raw Ahi Tuna &amp; cucumber. $7.00</p>
-	<p><b>Una Kyu Eel</b> Broiled, fresh water Eel &amp; cucumber. $12.50</p>
-	<h3>Large Rolls * (4pc)</h3>
-	<p><b>Ichikawa</b> Tempura Eel, Asparagus with Tamago and Eel sauce. $11.50</p>
-	<p><b>Rosana</b> Raw Scallops, Avocado, Surimi &amp; Tobikko. $11.50</p>
-	<p><b>Spider Roll</b> Tempura Soft-Shell Crab, Surimi, Tobikko &amp; Sprouts. $11.50</p>
-	<p>*Indicates RAW SEAFOOD and/or RAW EGG.</p>
-	<p>Consuming raw or under-cooked Meats, Seafood and Eggs may increase your risk for food borne illness.</p>
-	<h3>Maki (Rolls) * (8pc)</h3>
-	<p>Inside-Out Rolls</p>
-	<p><b>PT Maki</b> Raw Salmon, Albacore Tuna, cucumber &amp; Tobikko $11.00</p>
-	<p><b>Karashi Maguro</b> Spicy, Raw Ahi Tuna &amp; cucumber. $10.50</p>
-	<p><b>**Tetsuna</b> (7<sup>th</sup>. Heaven) Raw Salmon, Hamachi &amp; Ahi topped $13.50</p>
-	<p>California roll with Wasabi Tobikko.</p>
-	<p><b>Bin Cho Ten</b> Tempura Albacore, wrapped warm with Surimi and $12.00</p>
-	<p>Topped with Wasabi mayo &amp; Eel sauce.</p>
-	<p><b>**California Roll</b> Surimi, Avocado, cucumber &amp; Tobikko. $8.00</p>
-	<p><b>Shojin</b> Cucumber, Daikon Radish, Burdock root, Avocado &amp; Mountain $7.00</p>
-	<p>Potato topped with Daikon sprouts.</p>
-	<p><b>Vegetable Roll</b> Avocado, Kampyo, cucumber &amp; green onion. $8.00</p>
-	<p><b>Gin Dara</b> Tempura Black Cod &amp; cucumber drizzled with Eel sauce. $12.00</p>
-	<p><b>Sake Kawa</b> Broiled Salmon skin, cucumber &amp;Burdock root. $8.50</p>
-	<p><b>Dungeness Crab</b> Dungeness Crab salad with cucumber &amp; Tobikko. $10.50</p>
-	<p><b>**Tenmaki</b> Tempura Shrimp &amp; Surimi brushed with Eel sauce. $10.50</p>
-	<p><b>Shake Maki</b> Raw Salmon, cucumber &amp; green onion. $10.00</p>
-	<p><b>**Una Ten</b> Two Tempura Shrimp, wrapped warm, with Surimi. Topped` $14.00</p>
-	<p>with broiled fresh water Eel.</p>
-	<p><b>Una Kyu Eel Roll</b> Grilled Fresh Water Eel, cucumber &amp; green onion</p>
-	<p>Brushed with Eel sauce.</p>
-	<p><b>**</b> Substitute Dungeness Crab for Surimi add $4.00</p>
-	<p>*Indicates RAW SEAFOOD and/or RAW EGG.</p>
-	<p>Consuming raw or under-cooked Meats, Seafood and Eggs may increase your risk for food borne illness.</p>
-</div>
-
-<h3 data-n=drinks class="nNerve Bgc(blue) C(white) Py(.2rem) Maw(50%)@md Op(.6):h Cur(p) M(.2rem) Mx(a) Ta(c) Bdrus(s02)">
-Non-Alcoholic Beverages &amp; Teas
-</h3>
-<div data-n="drinks toggle" class="nMuscle Bd(2px,d,blue) P(.2rem)">
-	<p><b>Coke</b> $1.50</p>
-	<p><b>Diet Coke </b></p>
-	<p><b>Sprite </b></p>
-	<p><b>Ginger ale</b></p>
-	<p><b>Lemonade</b></p>
-	<p><b>Pellegrino Bottled Sparkling Water</b> $2.50</p>
-	<p><b>Pellegrino</b> <b>Sodas</b> $2.50</p>
-	<p>Orange, Lemon, Blood Orange</p>
-	<p><b>Bedford’s Sodas</b> (WA) $2.50</p>
-	<p>Ginger Ale, Ginger Beer, Root Beer, Marionberry Cream</p>
-	<p><b>Japanese Tea</b></p>
-	<p><b>Matcha Green Tea</b> $1.50</p>
-	<p><b>Genmai-Cha</b> (Brown Rice) $1.50</p>
-	<p><b>Iced Matcha Green Tea</b> $1.50</p>
-	<p><b>Desert</b></p>
-	<p><b>Elevated Ice Cream</b> Ginger or Seasonal selection. $5.00</p>
-	<p><b>Vegan Desert</b> Please ask your server. Not always available. $5.00</p>
-	<p><b>Tempura Ice Cream</b> Elevated Ginger Ice Cream, wrapped in $6.00</p>
-	<p>Pound Cake, dipped in Tempura and deep fried.</p>
-	<p><b>Mochi</b> Assorted flavors. $1.50</p>
-</div>
-
-</main>
-<script type="text/javascript" src=resources/nerve.js></script>
+getMenu("resources/menu.txt", "text/plain", src => {
+	console.log("resource");
+	document.getElementById("menu").innerHTML = marked(src);
+});
+</script>
 </body>
 </html>
