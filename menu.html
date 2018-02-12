@@ -25,35 +25,8 @@
 </nav>
 <hr class="W(80%)">
 
-<main class="Px(.5rem) Px(2rem)@md Pb(1rem)" id=menu></main>
-<script src=resources/marked.min.js></script>
-<script>
-function getMenu(u,t,c,r) {
-  r = new XMLHttpRequest();
-  r.open("GET", u);
-  r.responseType = t;
-  r.onreadystatechange = function() {
-    if (r.readyState > 3) {
-      c(t == "json" && r.responseType !== t ? JSON.parse(r.response) : r.response);
-  }};
-  r.send();
-};
-
-marked.setOptions({
-	renderer: new marked.Renderer(),
-	gfm: false,
-	tables: true,
-	breaks: false,
-	pedantic: false,
-	sanitize: false,
-	smartLists: true,
-	smartypants: true
-});
-
-getMenu("resources/menu.txt", "text/plain", src => {
-	console.log("resource");
-	document.getElementById("menu").innerHTML = marked(src);
-});
-</script>
+<main class="Px(.5rem) Px(2rem)@md Pb(1rem)" id=menu>
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vRYpUXhQzAeK2ICfqaH3jtCaQBLVWe_2shF65pEppVwjAgy3RT1IIPiVj7HSS9osZ22MXIlDfG2nxNU/pub?embedded=true"></iframe>
+</main>
 </body>
 </html>
